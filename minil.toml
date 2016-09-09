@@ -1,0 +1,4 @@
+name = "Linux-LXD"
+# badges = ["travis"]
+module_maker="ModuleBuildTiny"
+
