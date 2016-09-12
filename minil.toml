@@ -1,4 +1,4 @@
-name = "Linux-LXD"
-# badges = ["travis"]
+name = "Linux-REST-LXD"
+badges = ["travis"]
 module_maker="ModuleBuildTiny"
 
