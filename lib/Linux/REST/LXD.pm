@@ -1,4 +1,4 @@
-package Linux::LXD;
+package Linux::REST::LXD;
 use 5.008001;
 use strict;
 use utf8;
