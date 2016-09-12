@@ -1,10 +1,30 @@
 package Linux::LXD;
 use 5.008001;
 use strict;
+use utf8;
 use warnings;
-use REST::Client;
-
+use Moose;
+use Net::HTTP::Spore;
+use JSON qw(decode_json encode_json);
 our $VERSION = "0.01";
+
+my $api_version = "1.0"; #set by default
+
+
+has '_client' => (
+    is      => 'rw',
+    lazy    => 1,
+    default => sub {
+        my $self    = shift;
+        my $client  = Net::HTTP::Spore->new_from_spec('lxd.json');
+        $client->enable('Format::JSON');
+    }
+)
+
+
+
+
+
 
 
 
@@ -15,7 +35,8 @@ __END__
 
 =head1 NAME
 
-Linux::LXD - It's new $module
+Linux::LXD - It's a LXD API REST Client in perl
+
 
 =head1 SYNOPSIS
 
